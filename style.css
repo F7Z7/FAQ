@@ -1,4 +1,4 @@
-body{
+body {
 
     display: flex;
     flex-direction: column;
@@ -11,18 +11,66 @@ body{
     font-style: normal;
     background-color: #f9eeff;
 }
-.parent{
+#topBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; /* Adjust height as necessary */
+    z-index: -1; /* Push it behind other elements */
+}
+
+.parent {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     max-width: 600px;
     background-color: white;
-    height: 100vh;
+    /*margin: 20px;*/
+    padding: 20px;
+    border-radius: 20px;
+
 }
-.header{
+
+.header {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+}
+
+.qna {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1%;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    justify-content: space-between
+}
+
+.question a:hover {
+    color: #ad28eb;
+}
+.answer {
+    opacity: 60%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0 10px;
+}
+
+.answer.show {
+    height: auto;
+    opacity: 100%;
+    padding: 10px 10px; /* Ensures padding appears when expanded */
 }
