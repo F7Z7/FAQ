@@ -59,7 +59,6 @@ body {
     color: #ad28eb;
 }
 .answer {
-    opacity: 60%;
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease, opacity 0.3s ease;
@@ -71,6 +70,6 @@ body {
 
 .answer.show {
     height: auto;
-    opacity: 100%;
+    opacity: 60%;
     padding: 10px 10px; /* Ensures padding appears when expanded */
 }
