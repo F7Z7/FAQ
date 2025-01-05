@@ -10,7 +10,9 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: #f9eeff;
+
 }
+
 #topBackground {
     position: absolute;
     top: 0;
@@ -25,11 +27,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    max-width: 600px;
+    max-width: 500px;
     background-color: white;
     /*margin: 20px;*/
     padding: 20px;
     border-radius: 20px;
+    flex-grow: 1;
 
 }
 
@@ -44,8 +47,8 @@ body {
 .qna {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 1%;
+    gap: 1rem;
+    padding: 10px;
 }
 
 .question {
@@ -58,18 +61,39 @@ body {
 .question a:hover {
     color: #ad28eb;
 }
+
 .answer {
     height: 0;
     overflow: hidden;
     transition: height 0.3s ease, opacity 0.3s ease;
-    background-color: #f1f1f1;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
-    padding: 0 10px;
 }
 
 .answer.show {
     height: auto;
     opacity: 60%;
-    padding: 10px 10px; /* Ensures padding appears when expanded */
+} @media (max-width: 320px) {
+    body {
+        height: 80%;
+        padding: 10px; 
+    }
+
+    .parent {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        gap: 0.5rem;  /* Reduce the gap between header items */
+    }
+
+
+    .qna {
+        padding: 5px;
+    }
+
+    .answer {
+        font-size: 12px;  /* Reduce font size for smaller screens */
+    }
+
 }
